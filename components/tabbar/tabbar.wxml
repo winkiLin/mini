@@ -1,0 +1,15 @@
+<!--components/tabbar/tabbar.wxml-->
+<view>
+	<view class="tabbar">
+		<view 
+			wx:for="{{list}}" 
+			wx:key="index"
+			catchtap="pathTo"
+			data-type="{{item.text}}"
+			class="{{item.text === '找版' ? 'middle-img' : ''}}"
+		>
+			<image src="{{selected == item.text ? item.selectedIconPath : item.iconPath}}"></image>
+			<text style="color:{{selected == item.text ? '#0E6FE7' : '#000000'}}">{{ item.text }}</text>
+		</view>
+	</view>
+</view>
